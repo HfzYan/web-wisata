@@ -31,7 +31,7 @@
           <b class="judul">ALAM</b> 
 
           
-          <b class="admin">Admin</b><a type="button" href="tesalamadmin.php?id=1">Logout</button></a>
+          <b class="admin">Admin</b><button type="button">Logout</button>
 
         </div>
          <button type="button" class="addbutton" data-toggle="modal" data-target="#exampleModal">
