@@ -17,73 +17,63 @@
 				</ul>
 			</nav>
 <!-- Banner -->
-    <div class="container">
       <div class="header">
           <img src="../img/banner-kuliner.png" width="100%" height="500">
       </div>
 
 <!-- Konten -->
+<div class="container">
 
-        <section id="konten">
-                <div class="konten-list">
-                    <div class="objek-wisata1">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                    <div class="objek-wisata2">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                    <div class="objek-wisata3">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="box-container">
 
-		<section id="konten">
-                <div class="konten-list">
-                    <div class="objek-wisata1">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                    <div class="objek-wisata2">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                    <div class="objek-wisata3">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="box">
+            <img src="../img/wisata-kuliner/Lontong-Orari.jpg" alt="">
+            <h3>Nama Kuliner</h3>
+        </div>
 
-		<section id="konten">
-                <div class="konten-list">
-                    <div class="objek-wisata1">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                    <div class="objek-wisata2">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                    <div class="objek-wisata3">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="box">
+            <img src="../img/wisata-kuliner/Soto-Banjar.jpg" alt="">
+            <h3>Nama Kuliner</h3>
+        </div>
 
-		<section id="konten">
-                <div class="konten-list">
-                    <div class="objek-wisata1">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                    <div class="objek-wisata2">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                    <div class="objek-wisata3">
-                        <img src="../img/konten-kuliner.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
-		
+        <div class="box">
+            <img src="../img/wisata-kuliner/Bubur-Baayak.jpg" alt="">
+            <h3>Nama Kuliner</h3>
+        </div>
+
+        <div class="box">
+            <img src="../img/wisata-kuliner/amparan-tatak.jpg" alt="">
+            <h3>Nama Kuliner</h3>
+        </div>
+
+        <div class="box">
+            <img src="../img/wisata-kuliner/bingka.jpg" alt="">
+            <h3>Nama Kuliner</h3>
+        </div>
+
+        <div class="box">
+            <img src="../img/wisata-kuliner/bubur-sagu.jpg" alt="">
+            <h3>Nama Kuliner</h3>
+        </div>
+
+        <div class="box">
+            <img src="../img/wisata-kuliner/cucur.jpg" alt="">
+            <h3>Nama Kuliner</h3>
+        </div>
+
+        <div class="box">
+            <img src="../img/wisata-kuliner/lam.jpg" alt="">
+            <h3>Nama Kuliner</h3>
+        </div>
+
+        <div class="box">
+            <img src="../img/wisata-kuliner/wadai-cincin.jpg" alt="">
+            <h3>Nama Kuliner</h3>
+        </div>
+
+	</div>
+</div>
+
 <!-- Footer -->
 <div class="footer">
         
