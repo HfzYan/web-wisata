@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include '../config/Controller.php' ?>
+<?php //include '../config/Controller.php' ?>
 
 <html lang="en">
 <head>
