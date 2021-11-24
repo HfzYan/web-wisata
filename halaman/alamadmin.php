@@ -80,7 +80,7 @@
           <tr>
             <td width="3%">id</td>
             <td width="40%">judul</td>
-            <td><a href=# data-toggle="modal" data-target="#exampleModal">Alamat</a></td>
+            <td><a href=alamadmin.php?id=1 data-toggle="modal" data-target="#exampleModal">Alamat</a></td>
             <td><a href=# data-toggle="modal" data-target="#exampleModal">Deskripsi</a></td>
             <td><a href=# data-toggle="modal" data-target="#exampleModal">Gambar</a></td>
             <td><button class="editbutton"data-toggle="modal" data-target="#exampleModal">Edit</button><button class="hapusbutton">Hapus</button></td>
