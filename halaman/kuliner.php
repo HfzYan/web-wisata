@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Amazing Kalsel - Alam</title>
+	<title>Amazing Kalsel - Kuliner</title>
 <!-- menghubungkan dengan file css -->
 	<link rel="stylesheet" type="text/css" href="../css/objek-wisata.css">
 </head>
