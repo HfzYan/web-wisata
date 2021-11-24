@@ -37,7 +37,7 @@
          <button type="button" class="addbutton" data-toggle="modal" data-target="#exampleModal">
           + Tambah
         </button> 
-        <a href='alam.php'>
+        <a href='alam.php' target="_blank">
         <button type="button" class="addbutton" href=#>
           <- Tampilan Halaman Alam
         </button> 
