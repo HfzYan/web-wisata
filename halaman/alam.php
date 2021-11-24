@@ -17,72 +17,62 @@
 				</ul>
 			</nav>
 <!-- Banner -->
-    <div class="container">
       <div class="header">
           <img src="../img/banner-alam.png" width="100%" height="500">
       </div>
 
 <!-- Konten -->
+<div class="container">
 
-        <section id="konten">
-                <div class="konten-list">
-                    <div class="objek-wisata1">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                    <div class="objek-wisata2">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                    <div class="objek-wisata3">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="box-container">
 
-		<section id="konten">
-                <div class="konten-list">
-                    <div class="objek-wisata1">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                    <div class="objek-wisata2">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                    <div class="objek-wisata3">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<div class="box">
+            <img src="../img/wisata-alam/BendunganTapin.jpg" alt="">
+            <h3>Nama Wisata</h3>
+        </div>
 
-		<section id="konten">
-                <div class="konten-list">
-                    <div class="objek-wisata1">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                    <div class="objek-wisata2">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                    <div class="objek-wisata3">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<div class="box">
+            <img src="../img/wisata-alam/HutanMeranti.jpg" alt="">
+            <h3>Nama Wisata</h3>
+        </div>
 
-		<section id="konten">
-                <div class="konten-list">
-                    <div class="objek-wisata1">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                    <div class="objek-wisata2">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                    <div class="objek-wisata3">
-                        <img src="../img/konten-alam.png"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<div class="box">
+            <img src="../img/wisata-alam/DanauUndan.jpg" alt="">
+            <h3>Nama Wisata</h3>
+        </div>
+
+		<div class="box">
+            <img src="../img/wisata-alam/DesaJuhu.jpg" alt="">
+            <h3>Nama Wisata</h3>
+        </div>
+
+		<div class="box">
+            <img src="../img/wisata-alam/KampoengBamboe.jpg" alt="">
+            <h3>Nama Wisata</h3>
+        </div>
+
+		<div class="box">
+            <img src="../img/wisata-alam/WatuBadinding.jpg" alt="">
+            <h3>Nama Wisata</h3>
+        </div>
+
+		<div class="box">
+            <img src="../img/wisata-alam/WadukRiamKanan.jpg" alt="">
+            <h3>Nama Wisata</h3>
+        </div>
+
+        <div class="box">
+            <img src="../img/wisata-alam/TahuraSultanAdam.jpg" alt="">
+            <h3>Nama Wisata</h3>
+        </div>
+
+        <div class="box">
+            <img src="../img/wisata-alam/VillaSungaiLuar.jpg" alt="">
+            <h3>Nama Wisata</h3>
+        </div>
+
+	</div>
+</div>
 
 <!-- Footer -->
 <div class="footer">
