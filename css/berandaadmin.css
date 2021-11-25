@@ -166,6 +166,17 @@ button{
   margin-bottom: 20px;
 }
 
+.col-2 h3 a{
+  color: #717171;
+  text-decoration: none;
+}
+
+.col-2 h3:hover a{
+  color:#530a0a; 
+  text-decoration:none; 
+  cursor:pointer;  
+}
+
 .col-3 {
   border: 1px solid lightgray;
   background-color: white;
@@ -179,6 +190,16 @@ button{
   margin-right: -30px;
 }
 
+.col-3 h3 a{
+  color: #717171;
+  text-decoration: none;
+}
+
+.col-3 h3:hover a{
+  color:#530a0a; 
+  text-decoration:none; 
+  cursor:pointer;  
+}
 
 .col-4 {
   border: 1px solid lightgray;
@@ -190,6 +211,17 @@ button{
   border-radius: 15px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-top: 1px;
+}
+
+.col-4 h3 a{
+  color: #717171;
+  text-decoration: none;
+}
+
+.col-4 h3:hover a{
+  color:#530a0a; 
+  text-decoration:none; 
+  cursor:pointer;  
 }
 
 .kotak1{
