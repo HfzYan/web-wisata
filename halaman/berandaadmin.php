@@ -36,7 +36,7 @@
           </div>
           <div class="col-2">
             <div class="kotak"><img src="../img/admin/icon-alam.png"></div>
-            <br><h3>Alam</h3>
+            <br><h3><a href="../halaman/alam.php">Alam</a></h3>
             <br><p>Rekomendasi destinasi wisata yang berhubungan dengan alam, seperti pantai, sungai, air terjun, gunung, dan masih banyak lagi.</p>
           </div>
         </div>
@@ -44,12 +44,12 @@
         <div class="container">
           <div class="col-3">
             <div class="kotak"><img src="../img/admin/icon-kuliner.png"></div>
-            <br><h3>Kuliner</h3>
+            <br><h3><a href="../halaman/kuliner.php">Kuliner</a></h3>
             <br><p>Rekomendasi tempat wisata kuliner tradisional khas Kalimantan Selatan.</p>
           </div>
           <div class="col-4">
             <div class="kotak1"><img src="../img/admin/icon-religi.png"></div>
-            <br><h3>Religi</h3>
+            <br><h3><a href="../halaman/religi.php">Religi</a></h3>
             <br><p>Rekomendasi destinasi wisata yang berhubungan dengan tempat ibadah dan kegiatan atau event keagamaan.</p>
           </div>
         </div>
