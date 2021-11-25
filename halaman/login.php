@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,18 +25,41 @@
         <div class="container-right"> 
           <div calss="col-1">
          <center> <h1>LOGIN ADMIN</h1></center> <br>
-            <form>
+            <form action="" method="POST">
               <div ="kotak">
-             <input class="kotak" type="text" placeholder="Username">
+             <input class="kotak" type="text" placeholder="Username" name="Username">
             </div>
             <br>
               <div ="kotak"> 
-                <input class="kotak" type="text" placeholder="Password"> <br>
+                <input class="kotak" type="text" placeholder="Password" name="Password"> <br>
               </div>
               <br>
               <div ="button">
-              <button type="submit" class="button" value="Masuk"> Masuk</button> 
+              <button type="submit" class="button" value="Masuk" name="login"> Masuk</button> 
             </form>
+            <?php
+            if(isset($_POST['login'])){
+              include"koneksi.php";
+              $username = $_POST['Username'];
+              $password = $_POST['Password'];
+
+              $cek_user = mysqli_query( $conn,"SELECT * FROM users WHERE user_name='$username'");
+              $row = mysqli_num_rows($cek_user);
+
+              if( $row == 1){
+                  $fetch_pass=mysqli_fetch_assoc($cek_user);
+                  $cek_pass = $fetch_pass['password'];
+                  if($cek_pass <> $password){
+                    echo"<script>alert('Password Salah');</script>";
+                  }else{
+                    $_SESSION['log']=true;
+                    echo"<script>alert('Login berhasil');document.location.href='berandaadmin.php'</script>";
+                  }
+              }else{
+                echo"<script>alert('Anda Bukan Admin');</script>";
+              }
+            }
+            ?>
 </aside>
         </div>  
 </div>   
