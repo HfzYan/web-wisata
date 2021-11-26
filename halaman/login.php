@@ -39,7 +39,6 @@ session_start();
             </form>
             <?php
             if(isset($_POST['login'])){
-		echo 'this works';
               include '../config/database.php';
               $username = $_POST['Username'];
               $password = $_POST['Password'];
