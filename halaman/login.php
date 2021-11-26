@@ -48,6 +48,7 @@ session_start();
 
               if( $row == 1){
                   $fetch_pass=mysqli_fetch_assoc($cek_user);
+		  echo 'this works';
                   $cek_pass = $fetch_pass['password'];
                   if($cek_pass <> $password){
                     echo"<script>alert('Password Salah');</script>";
