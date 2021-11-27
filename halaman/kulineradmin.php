@@ -1,11 +1,11 @@
 <?php include 'database.php' ?>
-<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_religi;"); ?>
+<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_kuliner;"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Religi Admin</title>
+	<title>Kuliner Admin</title>
 	<link rel="stylesheet" type="text/css" href="../amazingkalsel/css/alamadmin.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -27,7 +27,7 @@
     <div class="main_content">
         <div class="header1">
 
-          <b class="judul">RELIGI</b> 
+          <b class="judul">KULINER</b> 
 
           
           <b class="admin">Admin</b><button type="button">Logout</button>
@@ -39,7 +39,7 @@
         <!-- HREF TAMPILAN HALAMAN -->
         <a href=#>
         <button type="button" class="addbutton">
-          <- Tampilan Halaman Religi
+          <- Tampilan Halaman Kuliner
         </button> 
         </a>
         
@@ -89,7 +89,14 @@
             
             <td width="3%"><?php echo $data['id'] ?></td>
             <td width="40%"><?php echo $data['nama'] ?></td>
-            <td><a href="#" data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalAlamat">Alamat</a></td>
+
+            <?php if(isset($data['alamat'])) { ?>
+              <td><a href="#" data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalAlamat">Alamat</a></td>
+            <?php } 
+              else {?>
+              <td>-</td>
+            <?php } ?>
+
             <td><a href=# data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalDeskripsi">Deskripsi</a></td>
             <td><a href=# data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalGambar">Gambar</a></td>
             <td><button class="editbutton"data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalEdit">Edit</button><button class="hapusbutton">Hapus</button></td>
