@@ -87,7 +87,12 @@
             
             <td width="3%"><?php echo $data['id'] ?></td>
             <td width="40%"><?php echo $data['nama'] ?></td>
-            <td><a href="tesalamadmin.php?id=2" data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalAlamat">Alamat</a></td>
+            <?php if(isset($data['alamat'])) { ?>
+              <td><a href="#" data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalAlamat">Alamat</a></td>
+            <?php } 
+              else {?>
+              <td>-</td>
+            <?php } ?>
             <td><a href=# data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalDeskripsi">Deskripsi</a></td>
             <td><a href=# data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalGambar">Gambar</a></td>
             <td><button class="editbutton"data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalEdit">Edit</button><button class="hapusbutton">Hapus</button></td>
