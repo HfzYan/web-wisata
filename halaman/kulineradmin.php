@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kuliner Admin</title>
-	<link rel="stylesheet" type="text/css" href="../amazingkalsel/css/alamadmin.css">
+	<link rel="stylesheet" type="text/css" href="../css/alamadmin.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
