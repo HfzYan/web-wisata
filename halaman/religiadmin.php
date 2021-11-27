@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include 'database.php' ?>
+<?php include '../config/database.php' ?>
 <?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_alam;"); ?>
 <html lang="en">
 <head>
