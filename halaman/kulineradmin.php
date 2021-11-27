@@ -1,7 +1,8 @@
-<?php include 'database.php' ?>
-<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_kuliner;"); ?>
+
 
 <!DOCTYPE html>
+<?php include 'database.php' ?>
+<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_kuliner;"); ?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
