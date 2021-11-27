@@ -99,7 +99,7 @@
             <td><a href=# data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalGambar">Gambar</a></td>
             <td><button class="editbutton"data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalEdit">Edit</button><button class="hapusbutton">Hapus</button></td>
           </tr>
-          <?php include 'modal-tabel.php' ?>
+          <?php include 'modal/modal-tabel.php' ?>
           <?php endwhile ?>
         <!-- <tr class="active-row"> -->
         </tbody>
