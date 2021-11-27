@@ -35,7 +35,7 @@
           + Tambah
         </button> 
         <!-- HREF TAMPILAN HALAMAN -->
-        <a href=#>
+        <a href='kuliner.php'>
         <button type="button" class="addbutton">
           <- Tampilan Halaman Kuliner
         </button> 
