@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<?php include 'database.php' ?>
-<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_kuliner;"); ?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -10,6 +8,8 @@
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body class="modal-open">
+<?php include 'database.php' ?>
+<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_kuliner;"); ?>
 
 <div class="wrapper">
     <div class="sidebar">
