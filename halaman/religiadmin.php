@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php include '../config/database.php' ?>
-<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_alam;"); ?>
+<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_religi;"); ?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
