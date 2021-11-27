@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include '../config/database.php' ?>
+<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_kuliner;"); ?>
 <head>
 	<meta charset="UTF-8">
 	<title>Kuliner Admin</title>
@@ -8,9 +10,6 @@
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body class="modal-open">
-<?php include 'database.php' ?>
-<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_kuliner;"); ?>
-
 <div class="wrapper">
     <div class="sidebar">
         <h2><img src="../img/logoamazingkalselputih.png"></h2>
