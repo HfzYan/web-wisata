@@ -72,6 +72,24 @@
                   </div>
                   <div class="modal-body">
                     <?php echo 'add'; ?>
+                    <form action="namauntukaction.php" class="container">
+                    <label for="email"><b>Judul</b></label><br>
+                    <input type="text" placeholder="Isi dengan nama wisata alam" name="judul" required>
+                    <br><br>
+
+                    <label for="alamat"><b>Alamat</b></label><br>
+                    <textarea name="alamat" placeholder="Isi dengan alamat wisata alam" rows="5" cols="40"></textarea>
+                    <br><br>
+
+                    <label for="deskripsi"><b>Deskripsi</b></label><br>
+                    <textarea name="deskripsi" placeholder="Isi dengan penjelasan detail tentang objek wisata alam" rows="5" cols="40"></textarea>
+                    <br><br>
+
+                    <label for="img">Gambar</label><br>
+                    <input type="file" id="img" name="img" accept="image/*">
+                    <br>
+                    <button type="submit" class="editbutton">Login</button>
+                    </form>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
