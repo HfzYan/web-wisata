@@ -121,12 +121,12 @@
 	
 	//CRUD
 		if(isset($_POST['edit'])){
-      			$id = $_POST['id'];
-      			$gambar = $_POST['gambar'];
-      			$nama = $_POST['nama'];
-      			$deskripsi = $_POST['deskripsi'];
-      			$alamat = $_POST['alamat'];
-
+      			$id = $data['id'];
+      			$gambar = $_POST['editgambar'];
+      			$nama = $_POST['editnama'];
+      			$deskripsi = $_POST['editdeskripsi'];
+      			$alamat = $_POST['editalamat'];
+      			echo $deskripsi;
 
 			$edit = mysqli_query($koneksi, "UPDATE wisata_alam set
                               gambar = '$gambar',
