@@ -117,7 +117,33 @@
             <td><a href=# data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalGambar">Gambar</a></td>
             <td><button class="editbutton"data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalEdit">Edit</button><button class="hapusbutton">Hapus</button></td>
           </tr>
-          <?php include 'modal/modal-tabel.php' ?>
+          <?php include 'modal/modal-tabel.php' 
+	
+	//CRUD
+		if(isset($_POST['edit']){
+			$edit = mysqli_query($koneksi, "UPDATE wisata_alam set
+                              gambar = '$_POST['gambar']',
+                              nama = '$_POST['nama']',
+                              deskripsi = '$_POST['deskripsi']',
+                              alamat = '$_POST['alamat']'
+                              WHERE id = '$_POST['id']'");
+
+                            if($edit){
+                              echo "<script>alert('Data berhasil diubah!');
+                              document.location= '../halaman/alamadmin.php';
+                              </script>";
+                            }
+                            else
+                            {
+                              echo "<script>alert('Data gagal diubah!');
+                              document.location= '../halaman/alamadmin.php';
+                              </script>";
+                            }
+		} 
+		   //AKHIR CRUD 
+		?>
+		
+		
           <?php endwhile ?>
         <!-- <tr class="active-row"> -->
         </tbody>
