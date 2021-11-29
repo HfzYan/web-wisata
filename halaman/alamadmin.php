@@ -121,29 +121,38 @@
 	
 	//CRUD
 		if(isset($_POST['edit'])){
-      			$id = $data['id'];
+      			$id = $_POST['editid'];
       			$gambar = $_POST['editgambar'];
       			$nama = $_POST['editnama'];
       			$deskripsi = $_POST['editdeskripsi'];
       			$alamat = $_POST['editalamat'];
-      			echo $deskripsi;
 
-			$edit = mysqli_query($koneksi, "UPDATE wisata_alam set
-                              gambar = '$gambar',
-                              nama = '$nama',
-                              deskripsi = '$deskripsi',
-                              alamat = '$alamat'
-                              WHERE id = '$id'");
+      			if(isset($_POST['editgambar'])){
+        			$edit = mysqli_query($koneksi, "UPDATE wisata_alam set
+                              		gambar = '$gambar',
+                              		nama = '$nama',
+                              		deskripsi = '$deskripsi',
+                              		alamat = '$alamat'
+                              		WHERE id = '$id'");
+      			}
+      			else{
+        			$edit = mysqli_query($koneksi, "UPDATE wisata_alam set
+                              	nama = '$nama',
+                              	deskripsi = '$deskripsi',
+                              	alamat = '$alamat'
+                              	WHERE id = '$id'");
+      			}
+			
 
                             if($edit){
                               echo "<script>alert('Data berhasil diubah!');
-                              document.location= '../halaman/alamadmin.php';
+                              document.location= '../cobaweb/YAALLAH.php';
                               </script>";
                             }
                             else
                             {
                               echo "<script>alert('Data gagal diubah!');
-                              document.location= '../halaman/alamadmin.php';
+                              document.location= '../cobaweb/YAALLAH.php';
                               </script>";
                             }
 		} 
