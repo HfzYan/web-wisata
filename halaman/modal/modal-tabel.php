@@ -33,15 +33,16 @@
                               <br>
                               <textarea type="text" name="alamat" class="form-control" rows="7"><?php echo $data['alamat'] ?></textarea>
                             </div>
+                                      <br><br>
+                            <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                     <button type="submit" class="btn btn-success" name="edit" id="#<?php echo $data['id'] ?>ModalEdit">Edit Data</button>
+                             </div>
                             <br>
                          </form>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-success" name="edit" id="#<?php echo $data['id'] ?>ModalEdit">Edit Data</button>
                   </div>
                 </div>
               </div>
