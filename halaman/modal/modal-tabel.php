@@ -1,5 +1,4 @@
-            
-            <!-- MODAL EDIT -->
+<!-- MODAL EDIT -->
             <div class="modal fade" id="<?php echo $data['id'] ?>ModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -14,6 +13,10 @@
                       <div class="card">
                         <div class="card-body">
                           <form method="post" enctype="multipart/form-data">
+                          <div class="form-group">
+                              <label>ID</label>
+                              <input type="text" class="form-control" name="editid" value="<?php echo $data['id'] ?>" readonly>
+                            </div>
                             <div class="form-group">
                              <label>Gambar Wisata</label>
                                <input type="file" name="editgambar" class="form-control">
