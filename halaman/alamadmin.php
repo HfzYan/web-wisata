@@ -133,7 +133,7 @@
                               nama = '$nama',
                               deskripsi = '$deskripsi',
                               alamat = '$alamat'
-                              WHERE id = '$id");
+                              WHERE id = '$id'");
 
                             if($edit){
                               echo "<script>alert('Data berhasil diubah!');
