@@ -16,22 +16,22 @@
                           <form method="post" enctype="multipart/form-data">
                             <div class="form-group">
                              <label>Gambar Wisata</label>
-                               <input type="file" name="gambar" class="form-control">
+                               <input type="file" name="editgambar" class="form-control">
                                <br>
                                 <img src="<?php echo $data['gambar'] ?>" height="60" width="60">
                             </div>
                             <div class="form-group">
                               <label>Nama Wisata</label>
-                              <input type="text" class="form-control" name="nama" value="<?php echo $data['nama'] ?>">
+                              <input type="text" class="form-control" name="editnama" value="<?php echo $data['nama'] ?>">
                             </div>
                             <div class="form-group">
                               <label>Deskripsi</label>
-                              <textarea class="form-control" name="deskripsi" rows="7"><?php echo $data['deskripsi'] ?></textarea>
+                              <textarea class="form-control" name="editdeskripsi" rows="7"><?php echo $data['deskripsi'] ?></textarea>
                             </div>
                             <div class="form-group">
                               <label>Alamat</label>
                               <br>
-                              <textarea type="text" name="alamat" class="form-control" rows="7"><?php echo $data['alamat'] ?></textarea>
+                              <textarea type="text" name="editalamat" class="form-control" rows="7"><?php echo $data['alamat'] ?></textarea>
                             </div>
                                       <br><br>
                             <div class="modal-footer">
