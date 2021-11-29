@@ -146,13 +146,13 @@
 
                             if($edit){
                               echo "<script>alert('Data berhasil diubah!');
-                              document.location= '../cobaweb/YAALLAH.php';
+                              document.location= '../halaman/alamadmin.php';
                               </script>";
                             }
                             else
                             {
                               echo "<script>alert('Data gagal diubah!');
-                              document.location= '../cobaweb/YAALLAH.php';
+                              document.location= '../halaman/alamadmin.php';
                               </script>";
                             }
 		} 
