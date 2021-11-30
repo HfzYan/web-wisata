@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<?php include '../config/database.php' ?>
+
+<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_religi;"); ?>
+
+<html lang="en">
 <head>
 	<title>Amazing Kalsel - Religi</title>
 <!-- menghubungkan dengan file css -->
@@ -26,51 +30,15 @@
 
     <div class="box-container">
 
+        <?php 
+            while($data = mysqli_fetch_array($fetch)):
+        ?>
+        
         <div class="box">
-            <img src="../img/wisata-religi/gereja-katedral.jpg" alt="">
-            <h3>Nama Religi</h3>
+            <a href="../halaman/inforeligi.php?hal=info&id=<?php echo $data['id'] ?>" ><img src="<?php echo $data['gambar'] ?>" alt="">
+            <h3><?php echo $data['nama'] ?></h3></a>
         </div>
-
-        <div class="box">
-            <img src="../img/wisata-religi/guru-sekumpul.jpg" alt="">
-            <h3>Nama Religi</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-religi/klenteng-suci-nurani2.jpg" alt="">
-            <h3>Nama Religi</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-religi/gereja-katedral2.jpg" alt="">
-            <h3>Nama Religi</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-religi/klenteng-suci-nurani.jpeg" alt="">
-            <h3>Nama Religi</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-religi/guru-sekumpul2.jpg" alt="">
-            <h3>Nama Religi</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-religi/masjid-jami.jpg" alt="">
-            <h3>Nama Religi</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-religi/sultan-suriansyah.jpg" alt="">
-            <h3>Nama Religi</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-religi/sabilal-muhtadin.jpg" alt="">
-            <h3>Nama Religi</h3>
-        </div>
-
+        <?php endwhile ?>
 	</div>
 </div>
 
