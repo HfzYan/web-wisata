@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<?php include '../config/database.php' ?>
+
+<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_alam;"); ?>
+
+<html lang="en">
 <head>
 	<title>Amazing Kalsel - Alam</title>
 <!-- menghubungkan dengan file css -->
@@ -26,51 +30,15 @@
 
     <div class="box-container">
 
+        <?php 
+            while($data = mysqli_fetch_array($fetch)):
+        ?>
+        
 		<div class="box">
-            <img src="../img/wisata-alam/BendunganTapin.jpg" alt="">
-            <h3>Nama Wisata</h3>
+            <a href="../halaman/infoalam.php?hal=info&id=<?php echo $data['id'] ?>" ><img src="<?php echo $data['gambar'] ?>" alt="">
+            <h3><?php echo $data['nama'] ?></h3></a>
         </div>
-
-		<div class="box">
-            <img src="../img/wisata-alam/HutanMeranti.jpg" alt="">
-            <h3>Nama Wisata</h3>
-        </div>
-
-		<div class="box">
-            <img src="../img/wisata-alam/DanauUndan.jpg" alt="">
-            <h3>Nama Wisata</h3>
-        </div>
-
-		<div class="box">
-            <img src="../img/wisata-alam/DesaJuhu.jpg" alt="">
-            <h3>Nama Wisata</h3>
-        </div>
-
-		<div class="box">
-            <img src="../img/wisata-alam/KampoengBamboe.jpg" alt="">
-            <h3>Nama Wisata</h3>
-        </div>
-
-		<div class="box">
-            <img src="../img/wisata-alam/WatuBadinding.jpg" alt="">
-            <h3>Nama Wisata</h3>
-        </div>
-
-		<div class="box">
-            <img src="../img/wisata-alam/WadukRiamKanan.jpg" alt="">
-            <h3>Nama Wisata</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-alam/TahuraSultanAdam.jpg" alt="">
-            <h3>Nama Wisata</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-alam/VillaSungaiLuar.jpg" alt="">
-            <h3>Nama Wisata</h3>
-        </div>
-
+        <?php endwhile ?>
 	</div>
 </div>
 
