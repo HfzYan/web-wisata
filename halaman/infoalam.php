@@ -26,7 +26,7 @@
 		<div class="card" id="../halaman/infoalam.php?hal=info&id=<?php echo $data['id'] ?>">
 			<div class="container" align="left"> 
 				<h1><?php echo $data['nama'] ?></h1>
-				<img src="<?php echo $data['gambar'] ?>" alt="gambar">
+				<img src="<?php echo $data['gambar_2'] ?>" alt="gambar">
 				<div style="display: flex;">
    					<div class="container-left">
 	   					<table border="0,8">
