@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<?php include '../config/database.php' ?>
+
+<?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_kuliner;"); ?>
+
+<html lang="en">
 <head>
 	<title>Amazing Kalsel - Kuliner</title>
 <!-- menghubungkan dengan file css -->
@@ -26,51 +30,15 @@
 
     <div class="box-container">
 
+        <?php 
+            while($data = mysqli_fetch_array($fetch)):
+        ?>
+        
         <div class="box">
-            <img src="../img/wisata-kuliner/Lontong-Orari.jpg" alt="">
-            <h3>Nama Kuliner</h3>
+            <a href="../halaman/infokuliner.php?hal=info&id=<?php echo $data['id'] ?>" ><img src="<?php echo $data['gambar'] ?>" alt="">
+            <h3><?php echo $data['nama'] ?></h3></a>
         </div>
-
-        <div class="box">
-            <img src="../img/wisata-kuliner/Soto-Banjar.jpg" alt="">
-            <h3>Nama Kuliner</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-kuliner/Bubur-Baayak.jpg" alt="">
-            <h3>Nama Kuliner</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-kuliner/amparan-tatak.jpg" alt="">
-            <h3>Nama Kuliner</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-kuliner/bingka.jpg" alt="">
-            <h3>Nama Kuliner</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-kuliner/bubur-sagu.jpg" alt="">
-            <h3>Nama Kuliner</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-kuliner/cucur.jpg" alt="">
-            <h3>Nama Kuliner</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-kuliner/lam.jpg" alt="">
-            <h3>Nama Kuliner</h3>
-        </div>
-
-        <div class="box">
-            <img src="../img/wisata-kuliner/wadai-cincin.jpg" alt="">
-            <h3>Nama Kuliner</h3>
-        </div>
-
+        <?php endwhile ?>
 	</div>
 </div>
 
