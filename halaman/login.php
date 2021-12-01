@@ -63,6 +63,7 @@ if($_SESSION["login"]==1){
 		  			}
 		}
 		else{
+			echo "no";
 			$warning = "Invalid Account";
 		}
             }
