@@ -32,7 +32,7 @@
 
           
           <b class="admin">Admin</b>
-		<a href="alamadmin.php?logout=1">	
+		<a href="../config/logout.php">	
 		<button type="button" name="logout">Logout</button>
 		</a>
 
