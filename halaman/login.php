@@ -50,6 +50,7 @@ if($_SESSION["login"]==1){
               $account = mysqli_query( $koneksi,"SELECT * FROM users WHERE user_name='$username'");
 		    echo $account;
                 if($account){
+			echo "bisa";
                   $data = mysqli_fetch_assoc($account);
 
 		  			if($password = $data['password']){
