@@ -29,7 +29,7 @@
           <b class="judul">RELIGI</b> 
 
           
-          <a href="religiadmin.php?logout=1">	
+          <a href="../config/logout.php">	
 		<button type="button" name="logout">Logout</button>
 		</a>
 
