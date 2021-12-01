@@ -58,6 +58,7 @@ if($_SESSION["login"]==1){
 			  		header('Location: ./berandaadmin.php');
 		  			}
 		  			else{
+						echo "wrong lol";
 						$warning = "Wrong Password";
 		  			}
 		}
