@@ -47,7 +47,7 @@ if($_SESSION["login"] <> 1){
         </button> 
         <a href='alam.php' target="_blank">
         <button type="button" class="addbutton" href=#>
-          <- Tampilan Halaman Alam
+          Tampilan Halaman Alam ->
         </button> 
         </a>
         
