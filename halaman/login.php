@@ -59,7 +59,7 @@ if($_SESSION["login"]==1){
 
 		  			if($password == $data['password']){
 			  		$_SESSION["login"] = 1;
-			  		$_SESSION["username"] = $username;
+			  		$_SESSION["name"] = $data['name'];
 			  		header('Location: ./berandaadmin.php');
 		  			}
 		  			else{
