@@ -35,7 +35,7 @@
         ?>
         
         <div class="box">
-            <a href="../halaman/inforeligi.php?hal=info&id=<?php echo $data['id'] ?>" ><img src="<?php echo $data['gambar'] ?>" alt="">
+            <a style="text-decoration:none" href="../halaman/inforeligi.php?hal=info&id=<?php echo $data['id'] ?>" ><img src="<?php echo $data['gambar'] ?>" alt="">
             <h3><?php echo $data['nama'] ?></h3></a>
         </div>
         <?php endwhile ?>
