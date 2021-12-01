@@ -36,7 +36,7 @@ if($_SESSION["login"] <> 1){
           <b class="judul">ALAM</b> 
 
           
-          <b class="admin"><?php echo $_SESSION["login"] ?></b>
+          <b class="admin"><?php echo $_SESSION["name"] ?></b>
 		<a href="../config/logout.php">	
 		<button type="button" name="logout">Logout</button>
 		</a>
