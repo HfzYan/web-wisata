@@ -47,7 +47,7 @@ if($_SESSION["login"]==1){
               $username = $_POST['Username'];
               $password = $_POST['Password'];
 
-              $account = mysqli_query( $conn,"SELECT * FROM users WHERE user_name='$username'");
+              $account = mysqli_query( $koneksi,"SELECT * FROM users WHERE user_name='$username'");
 		    
                 if($account){
                   $data = mysqli_fetch_assoc($account);
