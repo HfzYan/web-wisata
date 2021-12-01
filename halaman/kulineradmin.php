@@ -1,3 +1,8 @@
+<?php session_start();
+if($_SESSION["login"] <> 1){
+	header('Location: login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include '../config/database.php' ?>
@@ -28,7 +33,7 @@
           <b class="judul">KULINER</b> 
 
           
-          <b class="admin">Admin</b>
+          <b class="admin"><?php echo $_SESSION["login"] ?></b>
 		
 	<a href="../config/logout.php">	
 		<button type="button" name="logout">Logout</button>
