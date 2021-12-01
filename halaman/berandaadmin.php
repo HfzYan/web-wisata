@@ -1,3 +1,8 @@
+<?php session_start();
+if($_SESSION["login"] <> 1){
+	header('Location: 'login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +27,13 @@
     </div>
     <div class="main_content">
         <div class="header1">
-          <b>Admin</b>
+          <b><?php echo $_SESSION["name"] ?></b>
 		<a href="../config/logout.php">	
 		<button type="button" name="logout">Logout</button>
 		</a>
         </div>  
         <div class="header2">
-          <b>Hello, Admin</b>
+          <b>Hello, <?php echo $_SESSION["name"] ?> </b>
         </div>
 
         <div class="container">
