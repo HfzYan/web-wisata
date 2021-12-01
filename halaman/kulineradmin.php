@@ -28,7 +28,11 @@
           <b class="judul">KULINER</b> 
 
           
-          <b class="admin">Admin</b><button type="button">Logout</button>
+          <b class="admin">Admin</b>
+		
+	<form action="" method="POST">	
+		<button type="button" name="logout">Logout</button>
+	</form>
 
         </div>
          <button type="button" class="addbutton" data-toggle="modal" data-target="#exampleModal">
