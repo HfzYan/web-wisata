@@ -1,5 +1,8 @@
 <?php
 session_start();
+if($_SESSION["login"]==1){
+	header('Location: berandaadmin.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -39,26 +42,28 @@ session_start();
             </form>
             <?php
             if(isset($_POST['login'])){
+
               include '../config/database.php';
               $username = $_POST['Username'];
               $password = $_POST['Password'];
 
-              $cek_user = mysqli_query( $conn,"SELECT * FROM users WHERE user_name='$username'");
-              $row = mysqli_num_rows($cek_user);
+              $account = mysqli_query( $conn,"SELECT * FROM users WHERE user_name='$username'");
+		    
+                if($account){
+                  $data = mysqli_fetch_assoc($account);
 
-              if( $row == 1){
-                  $fetch_pass=mysqli_fetch_assoc($cek_user);
-		  
-                  $cek_pass = $fetch_pass['password'];
-                  if($cek_pass <> $password){
-                    echo"<script>alert('Password Salah');</script>";
-                  }else{
-                    $_SESSION['log']=true;
-                    echo"<script>alert('Login berhasil');document.location.href='berandaadmin.php'</script>";
-                  }
-              }else{
-                echo"<script>alert('Anda Bukan Admin');</script>";
-              }
+		  			if($password = $data['password']){
+			  		$_SESSION["login"] = 1;
+			  		$_SESSION["username"] = $username;
+			  		header('Location: ./berandaadmin.php');
+		  			}
+		  			else{
+						$warning = "Wrong Password";
+		  			}
+		}
+		else{
+			$warning = "Invalid Account";
+		}
             }
             ?>
 </aside>
