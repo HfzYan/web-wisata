@@ -29,9 +29,9 @@
           <b class="judul">RELIGI</b> 
 
           
-          <form action="" method="POST">	
+          <a href="religiadmin.php?logout=1">	
 		<button type="button" name="logout">Logout</button>
-	</form>
+		</a>
 
         </div>
          <button type="button" class="addbutton" data-toggle="modal" data-target="#exampleModal">
