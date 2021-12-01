@@ -46,7 +46,7 @@ if($_SESSION["login"] <> 1){
         <!-- HREF TAMPILAN HALAMAN -->
         <a href='kuliner.php'>
         <button type="button" class="addbutton">
-          <- Tampilan Halaman Kuliner
+          Tampilan Halaman Kuliner ->
         </button> 
         </a>
         
