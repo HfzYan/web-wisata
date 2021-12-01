@@ -57,7 +57,7 @@ if($_SESSION["login"]==1){
 			  		header('Location: ./berandaadmin.php');
 		  			}
 		  			else{
-						echo " Wrong Password";
+						echo " Invalid Password";
 		  			}
 		}
 		else{
