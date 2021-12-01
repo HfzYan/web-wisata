@@ -1,3 +1,8 @@
+<?php session_start();
+if($_SESSION["login"] <> 1){
+	header('Location: login.php');
+}
+?>
 <!DOCTYPE html>
 <?php include '../config/database.php' ?>
 <?php $fetch = mysqli_query($koneksi,"SELECT * FROM wisata_religi;"); ?>
@@ -28,7 +33,7 @@
 
           <b class="judul">RELIGI</b> 
 
-          
+		<b class="admin"><?php echo $_SESSION["login"]; ?></b>
           <a href="../config/logout.php">	
 		<button type="button" name="logout">Logout</button>
 		</a>
