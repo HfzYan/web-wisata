@@ -30,9 +30,9 @@
           
           <b class="admin">Admin</b>
 		
-	<form action="" method="POST">	
+	<a href="../config/logout.php">	
 		<button type="button" name="logout">Logout</button>
-	</form>
+		</a>
 
         </div>
          <button type="button" class="addbutton" data-toggle="modal" data-target="#exampleModal">
