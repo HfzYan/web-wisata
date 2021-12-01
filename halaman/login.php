@@ -6,6 +6,13 @@ if($_SESSION["login"]==1){
 ?>
 
 <!DOCTYPE html>
+<?php include '../config/database.php'; 
+
+//debug
+      $account = mysqli_query($koneksi,"SELECT * FROM users WHERE user_name='grahardi'");
+	$data = mysqli_fetch_assoc($account);
+	print_r($data);
+?>
 <html>
 <head>
 	<title>Amazing Kalsel</title>
@@ -42,8 +49,6 @@ if($_SESSION["login"]==1){
             </form>
             <?php
             if(isset($_POST['login'])){
-
-              include '../config/database.php';
               $username = $_POST['Username'];
               $password = $_POST['Password'];
 
