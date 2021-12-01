@@ -44,7 +44,7 @@ if($_SESSION["login"] <> 1){
         </button> 
         <a href='religi.php'>
         <button type="button" class="addbutton" href=#>
-          <- Tampilan Halaman Alam
+          Tampilkan Halaman Religi ->
         </button> 
         </a>
         
