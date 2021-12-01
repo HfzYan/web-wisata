@@ -55,22 +55,19 @@ if($_SESSION["login"]==1){
               $account = mysqli_query($koneksi,"SELECT * FROM users WHERE user_name='$username'");
 		   
                 if(mysqli_num_rows($account) == 1){
-			echo "bisa";
                   $data = mysqli_fetch_assoc($account);
 
-		  			if($password = $data['password']){
+		  			if($password == $data['password']){
 			  		$_SESSION["login"] = 1;
 			  		$_SESSION["username"] = $username;
 			  		header('Location: ./berandaadmin.php');
 		  			}
 		  			else{
-						echo "wrong lol";
-						$warning = "Wrong Password";
+						echo " Wrong Password";
 		  			}
 		}
 		else{
-			echo "no";
-			$warning = "Invalid Account";
+			echo " Invalid Username";
 		}
             }
             ?>
