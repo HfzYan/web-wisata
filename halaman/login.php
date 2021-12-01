@@ -47,9 +47,9 @@ if($_SESSION["login"]==1){
               $username = $_POST['Username'];
               $password = $_POST['Password'];
 
-              $account = mysqli_query( $koneksi,"SELECT * FROM users WHERE user_name='$username'");
-		    echo $account;
-                if($account){
+              $account = mysqli_query($koneksi,"SELECT * FROM users WHERE user_name='$username'");
+		   
+                if(mysqli_num_rows($account) == 1){
 			echo "bisa";
                   $data = mysqli_fetch_assoc($account);
 
