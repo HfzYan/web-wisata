@@ -22,7 +22,10 @@
     </div>
     <div class="main_content">
         <div class="header1">
-          <b>Admin</b><button type="button">Logout</button>
+          <b>Admin</b>
+		<a href="../config/logout.php">	
+		<button type="button" name="logout">Logout</button>
+		</a>
         </div>  
         <div class="header2">
           <b>Hello, Admin</b>
