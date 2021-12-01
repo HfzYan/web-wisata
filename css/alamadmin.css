@@ -124,6 +124,17 @@ button {
   cursor: pointer;
 }
 
+input {
+  background-color: #7c1212;
+  color: white;
+  border-radius: 7px;
+  border: 100px;
+  padding: 7px 9px 7px 9px;
+  margin-left: 40px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
 .wrapper .main_content .addbutton {
   margin-top: 40px;
   margin-left: 40px;
