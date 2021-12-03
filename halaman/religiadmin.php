@@ -39,16 +39,11 @@ if($_SESSION["login"] <> 1){
 		</a>
 
         </div>
-         <button type="button" class="addbutton" data-toggle="modal" data-target="#exampleModal">
-          + Tambah
-        </button> 
-        <a href='religi.php'>
-        <button type="button" class="addbutton" href=#>
-          Tampilkan Halaman Religi ->
-        </button> 
-        </a>
+	    
+                   <a href="../halaman/inputreligi.php"><button type="button" class="addbutton">+ Tambah</button></a>
+          <a href='religi.php' target="_blank"><button type="button" class="addbutton" href=#>Tampilan Halaman Religi -></button></a>
         
-        <table class="content-table">
+      <table class="content-table">
         <thead>
           <tr>
             <th>ID</th>
@@ -60,73 +55,30 @@ if($_SESSION["login"] <> 1){
           </tr>
         </thead>
         <tbody>
-          <tr>
-            
-            
-            <!-- MODAL TAMBAH -->
 
-            
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Objek Wisata Alam</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <?php echo 'add'; ?>
-                    <form action="namauntukaction.php" class="container">
-                    <label for="email"><b>Judul</b></label><br>
-                    <input type="text" placeholder="Isi dengan nama wisata religi" name="judul" required>
-                    <br><br>
-
-                    <label for="alamat"><b>Alamat</b></label><br>
-                    <textarea name="alamat" placeholder="Isi dengan alamat wisata religi" rows="5" cols="40"></textarea>
-                    <br><br>
-
-                    <label for="deskripsi"><b>Deskripsi</b></label><br>
-                    <textarea name="deskripsi" placeholder="Isi dengan penjelasan detail tentang objek wisata religi" rows="5" cols="40"></textarea>
-                    <br><br>
-
-                    <label for="img">Gambar</label><br>
-                    <input type="file" id="img" name="img" accept="image/*">
-                    <br>
-                    <button type="submit" class="editbutton">Login</button>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-          </tr>
+          <?php $nomor=1; ?>
           <?php while($data = mysqli_fetch_array($fetch)): ?>
           <tr>
             
-            <td width="3%"><?php echo $data['id'] ?></td>
+            <td width="3%"><?php echo $nomor ?></td>
             <td width="40%"><?php echo $data['nama'] ?></td>
-            <?php if(isset($data['alamat'])) { ?>
-              <td><a href="#" data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalAlamat">Alamat</a></td>
-            <?php } 
-              else {?>
-              <td>-</td>
-            <?php } ?>
+            <td><a href="tesreligiadmin.php?id=2" data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalAlamat">Alamat</a></td>
             <td><a href=# data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalDeskripsi">Deskripsi</a></td>
             <td><a href=# data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalGambar">Gambar</a></td>
-            <td><button class="editbutton"data-toggle="modal" data-target="#<?php echo $data['id'] ?>ModalEdit">Edit</button><button class="hapusbutton">Hapus</button></td>
+            <td>
+              <a href="../halaman/editreligi.php?halaman=editreligi&id=<?=$data['id'];?>" name="edit"><button class="editbutton" >Edit</button></a>
+              <a href="../halaman/hapusreligi.php?halaman=hapusreligi&id=<?=$data['id'];?>"  onclick="return confirm('Yakin Hapus?')"><button type="button" class="hapusbutton">Hapus</button></a>
+            </td>
           </tr>
-          <?php include 'modal/modal-tabel.php' ?>
-          <?php endwhile ?>
+
+        <?php include 'modal/modal-tabel.php' ?>
+        <?php $nomor++; ?>
+        <?php endwhile ?>
+        
         <!-- <tr class="active-row"> -->
         </tbody>
-        </table>
+      </table>
+	<br><br>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
