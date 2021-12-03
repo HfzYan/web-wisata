@@ -10,7 +10,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body" align="center">
                     <?php echo $data['alamat'] ?>
                   </div>
                   <div class="modal-footer">
@@ -30,7 +30,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body" align="center">
                     <?php echo $data['deskripsi'] ?>
                   </div>
                   <div class="modal-footer">
@@ -50,7 +50,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body" align="center">
                     <img src="<?php echo $data['gambar'] ?>" height=600 width=600>
                   </div>
                   <div class="modal-footer">
