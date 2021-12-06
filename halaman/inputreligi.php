@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <?php include '../config/database.php' ?>
+<?php session_start();
+	if($_SESSION["login"] <> 1){
+		header('Location: login.php');
+	}
+?>
 
 <html lang="en">
 <head>
@@ -14,8 +19,11 @@
   <div class="main_content">
     <div class="header1">
           <b class="judul">Input Info Wisata Religi</b> 
-          <b class="admin">Admin</b><button type="button">Logout</button>
-        </div>
+          <b class="admin"><?php echo $_SESSION["name"] ?></b>
+		        <a href="../config/logout.php">	
+		          <button type="button" name="logout">Logout</button>
+		        </a>
+    </div>
   </div>
 </div>
 
