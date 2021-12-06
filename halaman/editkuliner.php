@@ -2,6 +2,12 @@
 <?php
   include '../config/database.php'
 ?>
+<?php session_start();
+	if($_SESSION["login"] <> 1){
+		header('Location: login.php');
+	}
+?>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,7 +21,10 @@
   <div class="main_content">
     <div class="header1">
           <b class="judul">Edit Info Wisata Kuliner</b> 
-          <b class="admin">Admin</b><button type="button">Logout</button>
+          <b class="admin"><?php echo $_SESSION["name"] ?></b>
+		        <a href="../config/logout.php">	
+		          <button type="button" name="logout">Logout</button>
+		        </a>
         </div>
   </div>
 </div>
