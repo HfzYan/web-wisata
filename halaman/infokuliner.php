@@ -13,7 +13,6 @@
 	<header>
 		<img src="../img/logoamazingkalsel.png" alt="logo">
 				<ul>
-                    <li><a href="home.php?page=alam">Home</a></li>
 					<li><a href="alam.php?page=alam">Alam</a></li>
 					<li><a href="kuliner.php?page=kuliner">Kuliner</a></li>
 					<li><a href="religi.php?page=religi">Religi</a></li>
