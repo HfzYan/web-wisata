@@ -64,7 +64,11 @@
           $loc = $_POST['alamat'];
           $pic = $_FILES['gambar']['name'];
           $folder = '../img/wisata-kuliner/';
-          move_uploaded_file($folder, $pic);
+	  $lokasigambar = $_FILES['gambar']['tmp_name'];
+          $folder = '../img/wisata-alam/';
+          $data = mysqli_query($koneksi,"INSERT INTO wisata_alam (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
+          if ($data) {
+          move_uploaded_file($lokasigambar, $folder.$pic);
           $data = mysqli_query($koneksi,"INSERT INTO wisata_kuliner (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
           if ($data) {
             echo "<script>document.location= '../halaman/kulineradmin.php';</script>";
