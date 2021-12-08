@@ -66,16 +66,15 @@
           $folder = '../img/wisata-religi/';
 	  $lokasigambar = $_FILES['gambar']['tmp_name'];
           
-          $data = mysqli_query($koneksi,"INSERT INTO wisata_alam (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
           if ($data) {
-          move_uploaded_file($lokasigambar, $folder.$pic);
-          $data = mysqli_query($koneksi,"INSERT INTO wisata_religi (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
-          if ($data) {
-            echo "<script>document.location= '../halaman/religiadmin.php';</script>";
-          }
-          else{
-            echo mysqli_error($koneksi);
-          }
+          	move_uploaded_file($lokasigambar, $folder.$pic);
+          	$data = mysqli_query($koneksi,"INSERT INTO wisata_religi (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
+          	if ($data) {
+           		echo "<script>document.location= '../halaman/religiadmin.php';</script>";
+          	}
+          	else{
+            		echo mysqli_error($koneksi);
+          	}
         }
       ?>
     </div>
