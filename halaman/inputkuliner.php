@@ -64,13 +64,12 @@
           $loc = $_POST['alamat'];
           $pic = $_FILES['gambar']['name'];
 	  $lokasigambar = $_FILES['gambar']['tmp_name'];
-          $folder = '../img/wisata-alam/';
+          $folder = '../img/wisata-kuliner/';
+          move_uploaded_file($lokasigambar, $folder.$pic);
+          $data = mysqli_query($koneksi,"INSERT INTO wisata_kuliner (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
           if ($data) {
-          	move_uploaded_file($lokasigambar, $folder.$pic);
-         	$data = mysqli_query($koneksi,"INSERT INTO wisata_kuliner (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
-          	if ($data) {
-            	echo "<script>document.location= '../halaman/kulineradmin.php';</script>";
-         	 }
+            echo "<script>document.location= '../halaman/kulineradmin.php';</script>";
+          }
           	else{
             	echo mysqli_error($koneksi);
           	}
