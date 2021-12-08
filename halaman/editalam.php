@@ -78,7 +78,7 @@ if($_SESSION["login"] <> 1){
 				$folder = '../img/wisata-alam/';
 
 				if (!empty($lokasigambar)) {
-					move_uploaded_file($folder, $lokasigambar.$namagambar);
+					move_uploaded_file($lokasigambar, $folder.$namagambar);
 
 					$koneksi->query("UPDATE wisata_alam SET
                         nama = '$name',
