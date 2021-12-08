@@ -79,7 +79,7 @@
         $folder = '../img/wisata-kuliner/';
 
         if (!empty($lokasigambar)) {
-          move_uploaded_file($folder, $lokasigambar.$namagambar);
+         move_uploaded_file($lokasigambar, $folder.$namagambar);
 
           $koneksi->query("UPDATE wisata_kuliner SET
                         nama = '$name',
