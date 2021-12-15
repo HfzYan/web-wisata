@@ -72,6 +72,7 @@
           }
           else{
             echo "<script>alert('Data Wisata Sudah Tersedia!');</script>";
+	    echo mysqli_error($koneksi);
           }
         }
       ?>
