@@ -71,7 +71,9 @@
             echo "<script>document.location= '../halaman/alamadmin.php';</script>";
           }
           else{
-            echo print_r('Data Sudah Ada!');
+            echo "<script>alert('Data Sudah Tersedia!');</script>";
+            echo mysqli_error($koneksi);
+
           }
         }
       ?>
