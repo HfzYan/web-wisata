@@ -70,9 +70,10 @@
           if ($data) {
             echo "<script>document.location= '../halaman/religiadmin.php';</script>";
           }
-          	else{
-            		echo mysqli_error($koneksi);
-          	}
+          else{
+            echo "<script>alert('Data Sudah Tersedia!');</script>";
+            echo mysqli_error($koneksi);
+          }
         }
       ?>
     </div>
