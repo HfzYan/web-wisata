@@ -71,7 +71,7 @@
             echo "<script>document.location= '../halaman/alamadmin.php';</script>";
           }
           else{
-            echo mysqli_error($koneksi);
+            echo "<script>alert('Data Wisata Sudah Tersedia!');</script>";
           }
         }
       ?>
