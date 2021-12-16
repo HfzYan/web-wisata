@@ -6,6 +6,8 @@
 <html lang="en">
 <head>
 	<title>Amazing Kalsel - Alam</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- menghubungkan dengan file css -->
 	<link rel="stylesheet" type="text/css" href="../css/objek-wisata.css">
 </head>
@@ -24,6 +26,9 @@
       <div class="header">
           <img src="../img/banner-alam.png" width="100%" height="500">
       </div>
+
+<!-- Search Box -->
+
 
 <!-- Konten -->
 <div class="container">
