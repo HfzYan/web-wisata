@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Amazing Kalsel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- menghubungkan dengan file css -->
 	<link rel="stylesheet" type="text/css" href="css\index-style.css">
 </head>
@@ -16,7 +18,7 @@
 		</ul>
     </nav>
 <!-- Banner -->
-    <div class="container">
+
       <div class="header">
           <img src="img/traveler.png" width="100%" height="500">
       </div>
@@ -24,6 +26,7 @@
           <h1>Tentang</h1>
           <h1>Kalimantan Selatan</h1>
     </div>
+    <div class="container">
     <div class="tentangkalsel">
         <p>Gunung Meratus membelah Kalimantan Selatan menjadi 2 wilayah yang berbeda. Bagian selatan provinsi adalah daratan rendah dengan sungai-sungai 
 yang terbentang melewati menuju rawa hutan bakau yang luas sepanjang pesisir pantai dan menjadikan tanah Kalimantan luar biasa subur.Pada 
@@ -41,68 +44,79 @@ perahu Klotok dan Speedboat.</p>
 dan rotan.</p>
 </div>
 <br>
+
 <div class="wisata">
 		<h1>WISATA</h1>
 		<p>Berwisata di Kalimantan Selatan tidak cukup jika hanya mengunjungi satu kawasan<br>
 		Jelajahi berbagai tempat favorit mulai dari kawasan wisata alam, wisata kuliner, dan wisata religi.</p>
 	</div>
      <!-- wisata content -->
-        <section id="wisata">
-                <div class="wisata-list">
-                    <div class="kartu-alam">
+        <div class="container">
+                <div class="card-container">
+                    <div class="card">
                     <a href="halaman/alam.php?page=alam">
                         <img src="img/alam-wisata.png"/></a>
                     </div>
-                    <div class="kartu-kuliner">
+                
+
+                
+                    <div class="card">
                     <a href="halaman/kuliner.php?page=kuliner">
                         <img src="img/kuliner-wisata.png"/></a>
                     </div>
-                    <div class="kartu-religi">
+                
+
+
+                
+                    <div class="card">
                     <a href="halaman/religi.php?page=religi">
                         <img src="img/religi-wisata.png"/></a>
                     </div>
-                </div>
-            </div>
-        </section>
-<div class="sosmed">
+        </div>
+        </div>
+<div class="medsos">
+
 		<h1>MEDIA SOSIAL</h1>
 		<p>Kunjungi dan ikuti juga akun Amazing Kalsel di Instagram <br>
 		untuk mendapatkan rekomendasi terbaru.</p>
 	</div>
      <!-- sosmed -->
-        <section id="sosmed">
-                <div class="sosmed-list">
-                    <div class="kartu-sosmed1">
+  
+        <div class="container">
+                <div class="sosmed-container">
+                    <div class="sosmed">
                     <a href="https://instagram.com/amazingkalsel/">
                         <img src="img/sosmed1.png"/>
                     </div>
-                    <div class="kartu-sosmed2">
+                    <div class="sosmed">
                     <a href="https://instagram.com/amazingkalsel/">
                         <img src="img/sosmed2.png"/>
                     </div>
-                    <div class="kartu-sosmed3">
+                    <div class="sosmed">
                     <a href="https://instagram.com/amazingkalsel/">
                         <img src="img/sosmed3.png"/>
                     </div>
-                    <div class="kartu-sosmed4">
+                    <div class="sosmed">
                     <a href="https://instagram.com/amazingkalsel/">
                         <img src="img/sosmed4.png"/>
                     </div>
-                    <div class="kartu-sosmed5">
+                    <div class="sosmed">
                     <a href="https://instagram.com/amazingkalsel/">
                         <img src="img/sosmed5.png"/>
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
 
 <!-- Instagram -->
+
 <div class="instagram">
     <a href="https://instagram.com/amazingkalsel/">
 	<img src="img/akun-instagram.png" alt="akunig">
     </div>
 
 <!-- Footer -->
+
 <div class="footer">
 		<ul>
 			<li><a>Copyright &#169; 2021 - Amazing Kalsel</a></li>
