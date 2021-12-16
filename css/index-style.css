@@ -44,6 +44,36 @@ nav img{
 	float: left;
 	height: 45px;
 }
+
+@media (max-width:425px){
+    nav {
+        background-color: #f0f0f0;
+        padding: 4px;
+        text-align: right;
+        position: sticky;
+        top: 0;
+        overflow: auto;
+        z-index: 1;
+     }
+     nav li {
+        display: inline;
+        list-style-type: none;
+        margin-right: 15px;
+        width: 8px;
+     }
+     nav a {
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #717171;
+        margin-top: 30px;
+     }
+     nav img{
+         margin-left: 30px; 
+         float: left;
+         height: 40px;
+     }
+}
  
  /*banner*/
 .container{
@@ -71,18 +101,36 @@ nav img{
 	color:#7C1212;
 	text-transform:uppercase;
 }
+@media (max-width:768px){
+     
+
+    .container{
+        width: 100%;
+    }
+    .header {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        background-position: center;
+        margin-bottom: 60px;
+    }
+    
+    .header img{
+        margin: 1px;
+        height: 300px;
+        width: 100%;
+    }
+}
+
 /*tentang-kalsel*/
 .tentangkalsel{
 	background-color: #fff;
-	width: 85%;
+	width: 100%;
 	border: 1px solid lightgray;
 	border-radius: 20px;
 	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 	padding: 20px;
-	margin: 10px;
-	float: right;
-	margin-right: 75px;
-	margin-bottom: 100px;
+	margin-bottom: 15px;
 }
 /*wisata*/
 .wisata{
@@ -100,156 +148,258 @@ nav img{
 	color: #444;
 }
 
-.wisata-list {
-		width: 100%;
-		padding: 5px;
-		display: flex;
-		justify-content: center;
+
+/*card objek wisata*/
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+      
 }
 
-.kartu-alam a{
-	    margin-left: -20%;
+.container {
+    width: 85%;
+    margin: 50px auto;
+  }
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.card{
+    width: 26%;
+	height: 250px;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px rgba(65, 60, 60, 0.2);
+    border-radius: 50px;
+    background: #fff;
+    text-align: center;
+
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+    border-radius: 25px;
+}
+
+
+.container .card-container .card:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
+}
+@media (max-width:1024px){
+    .container {
+        width: 100%;
+        margin: 50px auto;
+      }
+    
+    .card{
+        width: 26%;
+        height: 180px;
+        margin-bottom: 30px;
+        transition: 0.3s;
+        box-shadow: 0 5px 10px rgba(65, 60, 60, 0.2);
+        border-radius: 25px;
+        background: #fff;
+        text-align: center;
+    
+    }
+    
+    .card img{
+        width: 100%;
+        height: 250px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width:768px){
+    .container {
+        width: 100%;
+        margin: 50px auto;
+      }
+    
+
+    
+    .card{
+        width: 26%;
+        height: 150px;
+        margin-bottom: 30px;
+        transition: 0.3s;
+        box-shadow: 0 5px 10px rgba(65, 60, 60, 0.2);
+        border-radius: 25px;
+        background: #fff;
+        text-align: center;
+    
+    }
+    
+    .card img{
+        width: 100%;
+        height: 170px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width:480px){
+    .container {
+        width: 100%;
+        margin: 50px auto;
+      }
+    
+    .card-container{
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-flow: wrap;
+    }
+    
+    .card{
+        width: 55%;
+        transition: 0.3s;
+        box-shadow: 0 5px 10px rgba(65, 60, 60, 0.2);
+        border-radius: 18px;
+        background: #fff;
+        text-align: center;
+    
+    }
+    
+    .card img{
+        width: 100%;
+        height: 150px;
+        border-radius: 18px;
+    }
+}
 
-}
-.kartu-kuliner a{
-	    margin-left: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-}
-.kartu-religi a{
-	    margin-left: 30%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-}
-.kartu-alam img{
-    width: 200px;
-    border-radius: 10%;
-}
-.kartu-kuliner img{
-    width: 200px;
-    border-radius: 10%;
-}
-.kartu-religi img{
-    width: 200px;
-    border-radius: 10%;
-}
-.kartu-alam img:hover { 
-	-o-transition: all 0.3s; 
-	-moz-transition: all 0.3s; 
-	-webkit-transition: all 0.3s; 
-	-moz-transform: scale(1); 
-	-o-transform: scale(1); 
-	-webkit-transform: scale(1.15); 
-	-webkit-border-radius: 10% 10%; 
-	-moz-border-radius: 10% / 10%; 
-	-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.6); 
-}
-.kartu-kuliner img:hover { 
-	-o-transition: all 0.3s; 
-	-moz-transition: all 0.3s; 
-	-webkit-transition: all 0.3s; 
-	-moz-transform: scale(1); 
-	-o-transform: scale(1); 
-	-webkit-transform: scale(1.15); 
-	-webkit-border-radius: 10% 10%; 
-	-moz-border-radius: 10% / 10%; 
-	-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.6); 
-}
-.kartu-religi img:hover { 
-	-o-transition: all 0.3s; 
-	-moz-transition: all 0.3s; 
-	-webkit-transition: all 0.3s; 
-	-moz-transform: scale(1); 
-	-o-transform: scale(1); 
-	-webkit-transform: scale(1.15); 
-	-webkit-border-radius: 10% 10%; 
-	-moz-border-radius: 10% / 10%; 
-	-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.6); 
-}
 /*sosmed*/
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+      
+}
+
+.container {
+    width: 85%;
+    margin: 50px auto;
+  }
+
+.sosmed-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
 .sosmed{
+    width: 20%;
+	height: 270px;
+    transition: 0.3s;
+
+    border-radius: 50px;
+  
+    text-align: center;
+
+}
+
+.sosmed img{
+	margin-left: -15px;
+    width: 120%;
+    height: 270px;
+    border-radius: 25px;
+}
+@media (max-width:1024px){
+    .container {
+        width: 100%;
+        margin: 50px auto;
+      }
+    
+    .sosmed{
+        width: 20%;
+        height: 170px;
+        margin-bottom: 60px;
+        transition: 0.3s;
+        border-radius: 25px;
+        background: #fff;
+        text-align: center;
+    }
+    
+    .sosmed img{
+        margin-left: -15px;
+        width: 120%;
+        height: 270px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width:768px){
+    .container {
+        width: 100%;
+        margin: 50px auto;
+      }
+    
+    .sosmed{
+        width: 30%;
+        height: 170px;
+        margin-bottom: 60px;
+        transition: 0.3s;
+        border-radius: 25px;
+        background: #fff;
+        text-align: center;
+    }
+    
+    .sosmed img{
+        margin-left: -15px;
+        width: 120%;
+        height: 270px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width:480px){
+    .container {
+        width: 100%;
+        margin: 50px auto;
+      }
+    
+    .sosmed-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-flow: wrap;
+    }
+    
+    .sosmed{
+        width: 70%;
+        transition: 0.3s;
+        border-radius: 18px;
+        background: #fff;
+        text-align: center;
+    
+    }
+    
+    .sosmed img{
+        align-items: center;
+        width: 130%;
+        height: 270px;
+        border-radius: 18px;
+    }
+}
+
+
+.medsos{
 	margin-top: 100px;
 	text-align: center;
 }
-.sosmed h1{
+.medsos h1{
 	color: #7C1212;
 }
 
-.sosmed h3{
+.medsos h3{
 	text-align: center;
 	font-family: 'Segoe UI';
 	font-size: 35px;
 	color: #444;
-}
-
-.sosmed-list {
-		width: 100%;
-		padding: 5px;
-		display: flex;
-		justify-content: center;
-}
-
-.kartu-sosmed1 {
-	    margin-left: 0%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-}
-.kartu-sosmed2 {
-	    margin-left: -7%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-}
-.kartu-sosmed3 {
-	    margin-left: -7%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-}
-.kartu-sosmed4 {
-	    margin-left: -7%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-}
-.kartu-sosmed5 {
-	    margin-left: -7%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-}
-.kartu-sosmed1 img{
-    width: 300px;
-    border-radius: 10%;
-}
-.kartu-sosmed2 img{
-    width: 300px;
-    border-radius: 10%;
-}
-.kartu-sosmed3 img{
-    width: 300px;
-    border-radius: 10%;
-}
-.kartu-sosmed4 img{
-    width: 300px;
-    border-radius: 10%;
-}
-.kartu-sosmed5 img{
-    width: 300px;
-    border-radius: 10%;
 }
  
 div.halaman{
@@ -258,8 +408,8 @@ div.halaman{
 }
 
 .instagram img{
-	margin-top: -50px;
-	margin-bottom: 100px;
+	margin-top: -20px;
+	margin-bottom: 40px;
 	margin-left:auto;
 	margin-right:auto;
 	display:block;
@@ -301,4 +451,65 @@ div.footer img{
 	margin-right: 50px; 
 	float: right;
 	width: 20px;
+}
+
+@media (max-width:480px){
+    .footer{
+        background-color: #fff;
+        padding: 10px;
+  
+        top: 0;
+        overflow: auto;
+        text-align: center;
+    }
+     
+    div.footer ul {
+        display: inline;
+        list-style-type: none;
+        width: 20px;
+    }
+     
+    div.footer ul li {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+     
+    div.footer a {
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #777777;
+        margin-top: 20px;
+    }
+    
+    div.footer img{
+        display: none;
+        margin-right: 30px; 
+        width: 18px;
+    }
+}
+
+@media (max-width:375px){
+
+    .footer{
+        background-color: #fff;
+        padding: 10px;
+        top: 0;
+        overflow: auto;
+        text-align: center;
+    }
+    div.footer ul li {
+        margin:auto;
+    }
+    div.footer a {
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #777777;
+        margin-top: 20px;
+       
+   
+    }
 }
