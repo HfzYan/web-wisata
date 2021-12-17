@@ -83,7 +83,7 @@
 		echo "ga ngapa ngapain tu man?";
 
           //Is It Duplicate
-          $isDuplicate = mysqli_query($koneksi,"SELECT nama FROM wisata_alam WHERE nama=$name");
+          $isDuplicate = mysqli_query($koneksi,"SELECT nama FROM wisata_alam WHERE nama=$name;");
 	  echo "ga ngapa ngapain tu lah";
           
           if(!$isDuplicate){
@@ -94,7 +94,7 @@
           else{
 		  echo "ga duplikate toh";
             move_uploaded_file($lokasigambar, $folder.$pic);
-            $data = mysqli_query($koneksi,"INSERT INTO wisata_alam (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
+            $data = mysqli_query($koneksi,"INSERT INTO wisata_alam (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc');");
             if ($data) {
 		    echo "berhasil tu man";
               echo "<script>document.location= '../halaman/alamadmin.php';</script>";
