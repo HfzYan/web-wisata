@@ -73,6 +73,7 @@
       </form>
       <?php 
         if(isset($_POST['save'])) {
+		echo "ga ngapa ngapain tu man";
           $name = $_POST['nama'];
           $desc = $_POST['deskripsi'];
           $loc = $_POST['alamat'];
