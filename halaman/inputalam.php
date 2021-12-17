@@ -84,13 +84,12 @@
 
           //Is It Duplicate
           $isDuplicate = mysqli_query($koneksi,"SELECT nama FROM wisata_alam WHERE nama=$name");
-		echo "ga ngapa ngapain tu lah";
-		echo $isDuplicate;
+	  echo "ga ngapa ngapain tu lah";
           
-          if($isDuplicate){
+          if(!$isDuplicate){
 		  echo "duplicate man";
-            $_SESSION["errorDuplicate"] = 1;
-            echo "<script>document.location= '../halaman/alamadmin.php';</script>";
+            	$_SESSION["errorDuplicate"] = 1;
+            echo "<script>document.location= '../halaman/inputalam.php';</script>";
           }
           else{
 		  echo "ga duplikate toh";
@@ -99,10 +98,6 @@
             if ($data) {
 		    echo "berhasil tu man";
               echo "<script>document.location= '../halaman/alamadmin.php';</script>";
-            }
-            else{
-		echo "gagal tu man";
-              $_SESSION["errorDuplicate"] = 1;
             }
           }
           
