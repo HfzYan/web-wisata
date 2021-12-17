@@ -80,16 +80,20 @@
           $pic = $_FILES['gambar']['name'];
           $lokasigambar = $_FILES['gambar']['tmp_name'];
           $folder = '../img/wisata-alam/';
+		echo "ga ngapa ngapain tu man?";
 
           //Is It Duplicate
           $isDuplicate = mysqli_query($koneksi,"SELECT $name FROM wisata_alam");
+		echo "ga ngapa ngapain tu lah";
 		echo $isDuplicate;
           
           if($isDuplicate){
+		  echo "duplicate man";
             $_SESSION["errorDuplicate"] = 1;
             echo "<script>document.location= '../halaman/alamadmin.php';</script>";
           }
           else{
+		  echo "ga duplikate toh";
             move_uploaded_file($lokasigambar, $folder.$pic);
             $data = mysqli_query($koneksi,"INSERT INTO wisata_alam (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
             if ($data) {
