@@ -28,6 +28,20 @@
 </div>
 
 <br>
+
+<!-- Duplicate Warning -->
+<?php if($_SESSION["errorDuplicate"] == 1){
+  $_SESSION["errorDuplicate"] = 0; ?>
+  <div class="row">
+    <div class="alert alert-danger" role="alert">
+        Nama Wisata Sudah Ada!
+    </div>
+  </div>
+  <br>
+  <?php
+} ?>
+<!-- End of Duplicate Warning -->
+
 <div class="container">
 	<div class="card" style="box-shadow: 0 5px 10px rgba(65, 60, 60, 0.2);">
   		<div class="card-header" style="background-color: #7C1212">
@@ -65,16 +79,25 @@
           $pic = $_FILES['gambar']['name'];
           $lokasigambar = $_FILES['gambar']['tmp_name'];
           $folder = '../img/wisata-alam/';
-          move_uploaded_file($lokasigambar, $folder.$pic);
-          $data = mysqli_query($koneksi,"INSERT INTO wisata_alam (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
-          if ($data) {
+
+          //Is It Duplicate
+          $isDuplicate = mysqli_query($koneksi,"SELECT $name FROM wisata_alam");
+          
+          if($isDuplicate){
+            $_SESSION["errorDuplicate"] = 1;
             echo "<script>document.location= '../halaman/alamadmin.php';</script>";
           }
           else{
-            echo "<script>alert('Data Sudah Tersedia!');</script>";
-            echo mysqli_error($koneksi);
-
+            move_uploaded_file($lokasigambar, $folder.$pic);
+            $data = mysqli_query($koneksi,"INSERT INTO wisata_alam (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
+            if ($data) {
+              echo "<script>document.location= '../halaman/alamadmin.php';</script>";
+            }
+            else{
+              echo mysqli_error($koneksi);
+            }
           }
+          
         }
       ?>
 		</div>
