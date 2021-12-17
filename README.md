@@ -1,5 +1,5 @@
 # web-wisata
-● Aryo Pratama Ginantaka		        (1910817310012)
+● Aryo Pratama Ginantaka		        (1910817310012)<br>
 ● Gerin Rahardi			                (1910817210021)
 ● Muhammad Hafizh Yanuardi 	        (1910817210023)
 ● Muhammad Ilham Rasyid Ridha       (1910817310013)
