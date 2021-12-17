@@ -82,6 +82,7 @@
 
           //Is It Duplicate
           $isDuplicate = mysqli_query($koneksi,"SELECT $name FROM wisata_alam");
+		echo $isDuplicate;
           
           if($isDuplicate){
             $_SESSION["errorDuplicate"] = 1;
@@ -94,7 +95,7 @@
               echo "<script>document.location= '../halaman/alamadmin.php';</script>";
             }
             else{
-              echo mysqli_error($koneksi);
+              $_SESSION["errorDuplicate"] = 1;
             }
           }
           
