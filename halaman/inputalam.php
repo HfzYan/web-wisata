@@ -92,9 +92,11 @@
             move_uploaded_file($lokasigambar, $folder.$pic);
             $data = mysqli_query($koneksi,"INSERT INTO wisata_alam (nama, alamat, gambar, deskripsi) VALUES ('$name', '$loc', '$folder/$pic', '$desc')");
             if ($data) {
+		    echo "berhasil tu man";
               echo "<script>document.location= '../halaman/alamadmin.php';</script>";
             }
             else{
+		echo "gagal tu man";
               $_SESSION["errorDuplicate"] = 1;
             }
           }
